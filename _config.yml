@@ -1,2 +1,4 @@
 author:
 theme: minima
+header_pages:
+  - random.md
