@@ -1,4 +1,5 @@
 author:
 theme: minima
 header_pages:
+  - index.html
   - random.html
