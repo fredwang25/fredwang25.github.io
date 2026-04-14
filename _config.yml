@@ -1,5 +1,6 @@
 author:
 theme: minima
 header_pages:
-  - index.html
+  - publications.html
+  - cv.html
   - random.html

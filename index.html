@@ -2,28 +2,118 @@
 layout: default
 title: Home
 ---
-<style>.hero{display:flex;gap:12px;align-items:center;margin:12px 0 20px}.hero img{width:120px;height:120px;border-radius:50%;object-fit:cover}</style>
+
+<style>
+  .hero {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    margin: 24px 0 32px;
+    flex-wrap: wrap;
+  }
+  .hero img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+  }
+  .hero-text h1 {
+    margin: 0 0 6px;
+    font-size: 2em;
+  }
+  .hero-text .affil {
+    color: #555;
+    margin-bottom: 8px;
+  }
+  .hero-text .links a {
+    margin-right: 10px;
+  }
+  .section { margin-top: 2em; }
+  .news-list { list-style: none; padding: 0; }
+  .news-list li {
+    padding: 6px 0;
+    border-bottom: 1px solid #eee;
+  }
+  .news-list li:last-child { border-bottom: none; }
+  .news-date {
+    display: inline-block;
+    min-width: 110px;
+    color: #888;
+    font-variant-numeric: tabular-nums;
+  }
+  .paper-list { list-style: none; padding: 0; }
+  .paper-list li {
+    display: flex;
+    gap: 16px;
+    padding: 14px 0;
+    border-bottom: 1px solid #eee;
+  }
+  .paper-list li:last-child { border-bottom: none; }
+  .paper-thumb {
+    flex-shrink: 0;
+    width: 140px;
+    height: 90px;
+    background: #f4f4f4;
+    border-radius: 6px;
+    object-fit: cover;
+  }
+  .paper-body .title { font-weight: 600; }
+  .paper-body .authors { color: #444; font-size: 0.95em; }
+  .paper-body .venue { color: #666; font-size: 0.9em; font-style: italic; }
+  .paper-body .links { margin-top: 4px; font-size: 0.9em; }
+  .paper-body .links a { margin-right: 8px; }
+  .section-more {
+    margin-top: 12px;
+    font-size: 0.95em;
+  }
+</style>
 
 <header class="hero">
-  <img src="{{ '/assets/img/me.jpg' | relative_url }}" alt="Photo">
-  <div>
-    <h1>Your Name</h1>
-    <div>Your Title · Your Affiliation</div>
-    <div><a href="mailto:you@example.com">you@example.com</a> · <a href="https://www.linkedin.com/in/your-handle/">LinkedIn</a> · <a href="https://scholar.google.com/citations?user=YOURID">Google Scholar</a></div>
+  <img src="{{ '/assets/img/picture.jpg' | relative_url }}" alt="Frederic Wang">
+  <div class="hero-text">
+    <h1>Frederic Wang</h1>
+    <div class="links">
+      fzwang@caltech.edu ·
+      <a href="https://scholar.google.com/citations?hl=en&user=scNkh2gAAAAJ">Google Scholar</a> ·
+      <a href="https://github.com/fredwang25">GitHub</a>
+    </div>
   </div>
 </header>
 
-<h2>Bio</h2>
-<p>Short bio goes here.</p>
+<section class="section">
+  <h2>About</h2>
+  <p>I am a second-year Ph.D. student at Caltech in the Computing + Mathematical Sciences (CMS) Department, where I am advised by <a href="http://users.cms.caltech.edu/~klbouman/">Katie Bouman</a> and am in the <a href="http://imaging.cms.caltech.edu/">Computational Cameras</a> group. I am supported by the <a href="https://kortschakscholars.caltech.edu/">Kortschak Fellowship</a>. 
+    I'm really interested in combining statistical inference techniques with data-driven priors to both validate existing scientific hypotheses and discover new phenomena, particularly in astrophysical imaging.</p>
 
-<h2>News</h2>
-<ul>
-  <li><b>2025-09-20</b> — Placeholder news.</li>
-  <li><b>2025-08-05</b> — Another update.</li>
-</ul>
+<p>I previously received my B.S. and M.S. from UC Berkeley, where I was advised by <a href="https://people.eecs.berkeley.edu/~mlustig/">Miki Lustig</a> and <a href="https://users.ece.utexas.edu/~jtamir/">Jon Tamir</a> on MRI reconstruction and motion correction. I also did a internship at Dolby Laboratories where I worked on computer vision and image enhancement.</p> 
+</section>
 
-<h2>Papers</h2>
-<ul>
-  <li><b>Paper Title One</b> — Authors. <i>Venue</i>, 2025.</li>
-  <li><b>Paper Title Two</b> — Authors. <i>Venue</i>, 2024.</li>
-</ul>
+<section class="section">
+  <h2>News</h2>
+  <ul class="news-list">
+    <li><span class="news-date">2026-04-14</span> I finally made a website!</li>
+  </ul>
+</section>
+
+<section class="section">
+  <h2>Selected Papers</h2>
+  <ul class="paper-list">
+    <li>
+      <img class="paper-thumb" src="{{ '/assets/img/paper1.png' | relative_url }}" alt="">
+      <div class="paper-body">
+        <div class="title">Sample-efficient evidence estimation of score based priors for model selection</div>
+        <div class="authors">Frederic Wang, Katherine L. Bouman</div>
+        <div class="venue">ICLR 2026</div>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2602.20549">paper</a>
+          <a href="https://github.com/fredwang25/DiME">code</a>
+          <a href="https://imaging.cms.caltech.edu/dime/">project page</a>
+        </div>
+      </div>
+    </li>
+  </ul>
+  <div class="section-more">
+    See the <a href="{{ '/publications/' | relative_url }}">Publications</a> page for the full list.
+  </div>
+</section>
