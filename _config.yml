@@ -2,5 +2,4 @@ author:
 theme: minima
 header_pages:
   - publications.html
-  - cv.html
   - random.html
